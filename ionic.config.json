@@ -1,0 +1,7 @@
+{
+  "name": "betway",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
