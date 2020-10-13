@@ -1,0 +1,95 @@
+
+    <ion-toolbar>
+      <ion-tabs >
+        <ion-tab-bar slot="top" slot="fixed">
+          <ion-tab-button  routerLink="/home">
+            <ion-icon name="home-outline"></ion-icon>HOME
+          </ion-tab-button>
+      
+          <ion-tab-button routerLink="/sport">
+            <ion-icon name="color-filter-outline"></ion-icon>SPORTS
+          </ion-tab-button>
+      
+          <ion-tab-button routerLink="/technology">
+            <ion-icon name="laptop-outline"></ion-icon>TECHNOLOGY
+          </ion-tab-button>
+      
+          <ion-tab-button routerLink="/sample">
+            <ion-icon name="settings-outline"></ion-icon>SETTINGS
+          </ion-tab-button>
+    
+         
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-toolbar>
+
+    <ion-content class="main-content">
+      <ion-list>
+        <ion-item lines="full">
+          <ion-icon slot="start" name="moon"></ion-icon>
+          <ion-label>
+            Enable Darkmode
+          </ion-label>
+          <ion-toggle id="themeToggle" slot="end" [ngModel]="darkMode" (ionChange)="cambio()"></ion-toggle>
+        </ion-item>
+      </ion-list>
+      
+      <ion-card>
+        <ion-card-content>
+
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          
+        </ion-card-content>
+      </ion-card>
+     
+    </ion-content>
+
+    <ion-footer>
+      <ion-toolbar>
+        <ion-tabs >
+          <ion-tab-bar slot="bottom" slot="fixed">
+            <ion-tab-button  routerLink="/business">
+              <ion-icon name="business-outline"></ion-icon>BUSINESS
+            </ion-tab-button>
+        
+            <ion-tab-button routerLink="/entertainment">
+              <ion-icon name="radio-outline"></ion-icon>ENTERTAINMENT
+            </ion-tab-button>
+        
+            <ion-tab-button routerLink="/health">
+              <ion-icon name="medkit-outline"></ion-icon>HEALTH
+            </ion-tab-button>
+        
+            <ion-tab-button routerLink="/science">
+              <ion-icon name="earth-outline"></ion-icon>SCIENCE
+            </ion-tab-button>
+    
+           
+          </ion-tab-bar>
+        </ion-tabs>
+      </ion-toolbar>
+    </ion-footer>
+  

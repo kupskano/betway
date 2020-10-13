@@ -24,4 +24,13 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  checkDarkTheme() {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    console.log(prefersDark)
+    if( prefersDark.matches) {
+      document.body.classList.toggle('dark');
+      // storage.set('')
+    }
+  }
 }

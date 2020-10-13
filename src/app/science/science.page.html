@@ -1,0 +1,114 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+     BETWAY SCIENCE NEWS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-toolbar>
+  <ion-tabs >
+    <ion-tab-bar slot="top" slot="fixed">
+      <ion-tab-button  routerLink="/home">
+        <ion-icon name="home-outline"></ion-icon>HOME
+      </ion-tab-button>
+  
+      <ion-tab-button routerLink="/sport">
+        <ion-icon name="color-filter-outline"></ion-icon>SPORTS
+      </ion-tab-button>
+  
+      <ion-tab-button routerLink="/technology">
+        <ion-icon name="laptop-outline"></ion-icon>TECHNOLOGY
+      </ion-tab-button>
+  
+      <ion-tab-button routerLink="/sample">
+        <ion-icon name="settings-outline"></ion-icon>SETTINGS
+      </ion-tab-button>
+
+     
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>
+
+<ion-content >
+  <div>
+    <ion-card *ngFor="let article of articles">
+      <ion-card-content>
+        <div class="img-wrapper" >
+          <ion-img src="{{article.urlToImage}}"></ion-img>
+        </div>
+        
+        <ion-card-header>
+          <ion-card-subtitle>{{article.title}}</ion-card-subtitle>
+        </ion-card-header>
+     
+          <!-- <p>
+            {{news.publishedAt | date}}
+          </p> -->
+      </ion-card-content>
+      <div class="ion-text-center">
+      <ion-button ion-button fill="outline" href="{{article.url}}" large>READ FULL ARTICLE</ion-button>
+      </div>
+  
+    </ion-card>
+  </div>
+
+  <div *ngIf="!articles">
+    <div class="ion-padding custom-skeleton">
+      <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+    </div>
+  
+    <ion-list>
+      <ion-list-header>
+        <ion-label>
+          <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+        </ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs >
+      <ion-tab-bar slot="bottom" slot="fixed">
+        <ion-tab-button  routerLink="/business">
+          <ion-icon name="business-outline"></ion-icon>BUSINESS
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/entertainment">
+          <ion-icon name="radio-outline"></ion-icon>ENTERTAINMENT
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/health">
+          <ion-icon name="medkit-outline"></ion-icon>HEALTH
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/science">
+          <ion-icon name="earth-outline"></ion-icon>SCIENCE
+        </ion-tab-button>
+
+       
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

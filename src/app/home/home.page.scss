@@ -1,27 +1,20 @@
-#container {
-  text-align: center;
+ion-card-content {
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  color: #ffffff;
+  .img-wrapper {
+    border-radius: 14px;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
+  ion-icon {
+    color: #f2994a;
+    padding-right: 4px;
+  }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+  ion-card-subtitle:last-of-type {
+    padding-top:6px;
+   
+  }
 }
